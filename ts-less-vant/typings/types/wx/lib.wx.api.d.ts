@@ -16998,6 +16998,7 @@ Component({
         isFile(): boolean
     }
     interface TCPSocket {
+        connectStatus?: any
         /** [TCPSocket.bindWifi(Object options)](https://developers.weixin.qq.com/miniprogram/dev/api/network/tcp/TCPSocket.bindWifi.html)
          *
          * 需要基础库： `2.25.0`

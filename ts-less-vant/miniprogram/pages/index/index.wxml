@@ -1,8 +1,13 @@
-<cu-custom bgColor="bg-white" isBack="{{false}}">
-    <view slot="content">CozyLife</view>
-</cu-custom>
+<view class="container">
+    <custom-header style="width: 100%; z-index: 1;">
+        <view>可视门铃</view>
+    </custom-header>
 
-<van-button type="info">信息按钮</van-button>
+
+</view>
+
+
+
 
 
 <!--首页-->
