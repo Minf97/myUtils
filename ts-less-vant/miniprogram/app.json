@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "",
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "black"
+},
+  "usingComponents": {
+      "custom-header":"./components/custom-header/index",
+      "cu-custom": "./components/cu-custom/cu-custom"
+  },
+  "sitemapLocation": "sitemap.json"
+}

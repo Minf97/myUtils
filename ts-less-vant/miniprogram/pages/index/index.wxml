@@ -1,0 +1,37 @@
+<cu-custom bgColor="bg-white" isBack="{{false}}">
+    <view slot="content">CozyLife</view>
+</cu-custom>
+
+<van-button type="info">信息按钮</van-button>
+
+
+<!--首页-->
+<home style="{{PageCur!='plugin'?'display: none;':''}}" bindclickItem="clickItem" bindgetDeviceList="getData" bind:closeFindModal="closeFindModal" isHasNewDevice="{{isHasNewDevice}}" devicesArr="{{devicesArr}}"></home>
+
+<!--场景-->
+<sence style="{{PageCur!='sence'?'display: none;':''}}"></sence>
+
+<!--我的-->
+<mymenu style="{{PageCur!='my'?'display: none;':''}}"></mymenu>
+
+<!--底部导航栏-->
+<view class="cu-bar tabbar bg-white shadow foot">
+    <view class="action" bindtap="NavChange" id="plugin">
+        <view class='cuIcon-cu-image'>
+            <text class="cuIcon-home{{PageCur=='plugin'?'fill':''}} text-{{PageCur=='plugin'?'blue':'gray'}}"></text>
+        </view>
+        <view class=" {{PageCur=='plugin'?'text-blue':'text-gray'}}">首页</view>
+    </view>
+    <!-- <view class="action" bindtap="NavChange" id="sence">
+    <view class='cuIcon-cu-image'>
+      <text class="cuIcon-circle{{PageCur=='sence'?'fill':''}} text-{{PageCur=='sence'?'blue':'gray'}}"></text>
+    </view>
+    <view class=" {{PageCur=='sence'?'text-blue':'text-gray'}}">场景</view>
+  </view> -->
+    <view class="action" bindtap="NavChange" id="my">
+        <view class='cuIcon-cu-image'>
+            <text class="cuIcon-people{{PageCur=='my'?'fill':''}} text-{{PageCur=='my'?'blue':'gray'}}"></text>
+        </view>
+        <view class="{{PageCur=='my'?'text-blue':'text-gray'}}">我的</view>
+    </view>
+</view>

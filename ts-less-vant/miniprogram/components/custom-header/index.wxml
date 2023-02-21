@@ -1,0 +1,9 @@
+
+
+<view class="container">
+    <view style="height: {{statusBarHeight}}px; background-color: {{bgColor}};"></view>
+    <view class="customBar" style="height: {{customBar}}px; background-color: {{bgColor}};">
+        <!-- <image class="back" src="./left.png" mode="aspectFit"/> -->
+        <slot></slot>
+    </view>
+</view>

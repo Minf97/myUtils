@@ -1,0 +1,28 @@
+
+.container {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+}
+
+
+.customBar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 返回 */
+.left {
+    width: 50rpx;
+    height: 50rpx;
+}
+/* 返回end */
+
+
+/* 标题 */
+.title {
+    font-size: 26rpx;
+}
+/* 标题end */
