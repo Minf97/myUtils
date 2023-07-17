@@ -1,42 +1,25 @@
+<wxs src="/static/common/refresh.wxs" module="refresh"></wxs>
+
 <view class="container">
-    <custom-header style="width: 100%; z-index: 1;">
+    <!-- 自定义头部 -->
+    <custom-header bgColor="var(--color-bgColor)" style="width: 100%; z-index: 999;">
         <view>可视门铃</view>
     </custom-header>
 
+    <custom-body bind:onPullDownRefresh="onPullDownRefresh">
 
+
+    </custom-body>
 </view>
 
 
+<!-- 提示 -->
+<van-toast id="van-toast" />
+<!-- 弹窗 -->
+<van-dialog id="van-dialog" />
 
-
-
-<!--首页-->
-<home style="{{PageCur!='plugin'?'display: none;':''}}" bindclickItem="clickItem" bindgetDeviceList="getData" bind:closeFindModal="closeFindModal" isHasNewDevice="{{isHasNewDevice}}" devicesArr="{{devicesArr}}"></home>
-
-<!--场景-->
-<sence style="{{PageCur!='sence'?'display: none;':''}}"></sence>
-
-<!--我的-->
-<mymenu style="{{PageCur!='my'?'display: none;':''}}"></mymenu>
-
-<!--底部导航栏-->
-<view class="cu-bar tabbar bg-white shadow foot">
-    <view class="action" bindtap="NavChange" id="plugin">
-        <view class='cuIcon-cu-image'>
-            <text class="cuIcon-home{{PageCur=='plugin'?'fill':''}} text-{{PageCur=='plugin'?'blue':'gray'}}"></text>
-        </view>
-        <view class=" {{PageCur=='plugin'?'text-blue':'text-gray'}}">首页</view>
+<custom-action show="{{show}}">
+    <view>
+        ddd
     </view>
-    <!-- <view class="action" bindtap="NavChange" id="sence">
-    <view class='cuIcon-cu-image'>
-      <text class="cuIcon-circle{{PageCur=='sence'?'fill':''}} text-{{PageCur=='sence'?'blue':'gray'}}"></text>
-    </view>
-    <view class=" {{PageCur=='sence'?'text-blue':'text-gray'}}">场景</view>
-  </view> -->
-    <view class="action" bindtap="NavChange" id="my">
-        <view class='cuIcon-cu-image'>
-            <text class="cuIcon-people{{PageCur=='my'?'fill':''}} text-{{PageCur=='my'?'blue':'gray'}}"></text>
-        </view>
-        <view class="{{PageCur=='my'?'text-blue':'text-gray'}}">我的</view>
-    </view>
-</view>
+</custom-action>

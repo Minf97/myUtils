@@ -1,10 +1,14 @@
 
-
+// @ts-nocheck
 Component({
     properties: {
         bgColor: {
             type: String,
             value: '#fff'
+        },
+        back: {
+            type: Boolean,
+            value: false
         }
     },
     data: {
@@ -14,6 +18,10 @@ Component({
         customBar: (getApp().globalData?.systemInfo?.top as number - getApp().globalData?.systemInfo?.statusBarHeight as number) * 2 + getApp().globalData?.systemInfo?.height as number
     },
     methods: {
-        
+        backPage() {
+            wx.navigateBack({
+                delta: 1
+            });
+        },
     }
 })
