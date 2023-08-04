@@ -9,6 +9,10 @@ Component({
         back: {
             type: Boolean,
             value: false
+        },
+        backIconColor: {
+            type: String,
+            value: ''
         }
     },
     data: {
