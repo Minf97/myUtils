@@ -7,6 +7,10 @@ Component({
         show: {
             type: Boolean,
             value: false
+        },
+        height: {
+            type: String,
+            value: '600'
         }
     },
 
@@ -21,6 +25,8 @@ Component({
      * 组件的方法列表
      */
     methods: {
-
+        onClickHide() {
+            this.triggerEvent('onClickHide')
+        },
     }
 })
